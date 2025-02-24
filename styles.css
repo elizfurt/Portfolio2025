@@ -61,7 +61,8 @@ button {
 .info {
   border-radius: 12px;
   padding: 5%;
-  color: var(--bluegreen)  
+  color: var(--bluegreen);
+  max-width: 400px;
 }
 .photo {
   padding: 5%;
@@ -75,6 +76,7 @@ button {
   height: 125%;
   width: 100vw;
   background-color: var(--blue1);
+  padding-bottom: 25px;
 }
 .centered {
   display: flex;
@@ -96,12 +98,13 @@ button {
   width: 60%;
 }
 
-.example {
+.flip-card-front {
   background-color: var(--bluegreen);
   border-radius: 12px;
-  padding: 2%;
 }
-.example > h4 {
+.flip-card-front > h4 {
+  justify-content: center;
+  align-content: center;
   text-align: center;
 }
 .contact {
@@ -140,4 +143,65 @@ button {
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: light;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 225px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; 
+  border-radius: 12px;
+}
+
+.flip-card-front > img {
+    width: 100px;
+    height: auto;
+}
+
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.smallpx {
+    padding: 25px;
+}
+
+.fixedpx {
+    width: 100px;
+    height: auto;
+    padding: 25px;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+
+.flip-card-front, .flip-card-back {
+  border-radius: 12px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+
+.flip-card-front {
+    background-color: var(--blue2);
+    color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: var(--brownlite2);
+  color: white;
+  transform: rotateY(180deg);
 }
