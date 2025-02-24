@@ -109,7 +109,7 @@ button {
 }
 .contact {
   width: 100vw;
-  height: 75vh;
+  height: 125%;
   background-color:var(--brownlite2);
 }
 
@@ -147,7 +147,7 @@ button {
 
 .flip-card {
   background-color: transparent;
-  width: 300px;
+  max-width: 300px;
   height: 225px;
   border: 1px solid #f1f1f1;
   perspective: 1000px; 
@@ -204,4 +204,51 @@ button {
   background-color: var(--brownlite2);
   color: white;
   transform: rotateY(180deg);
+}
+
+.contact {
+    padding: 25px;
+}
+
+.card {
+  border-radius: 12px;
+  display: flex;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  height: 200px;
+}
+.card-left {
+    border-radius: 12px 0 0 12px;
+    height: 100%;
+    width: auto;
+}
+
+.card-left > img {
+   border-radius: 12px 0 0 12px; 
+}
+
+.card-right {
+    border-radius: 0 12px 12px 0;
+    background-color: var(--bluegreen);
+    width: 100%;
+}
+.subtitle {
+  color:var(--gray3);
+  font-size: 18px;
+}
+.title {
+  color:var(--gray3);
+  font-size: 24px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: var(--blue1)
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
 }
