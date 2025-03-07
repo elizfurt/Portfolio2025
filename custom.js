@@ -1,4 +1,4 @@
-fetch('nav-bar.html')
+fetch('pages/nav-bar.html')
   .then(response => response.text())
   .then(html => {
     const navBar = document.createElement('div');
