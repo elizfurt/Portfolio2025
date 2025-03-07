@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function() {
 fetch('nav-bar.html')
   .then(response => response.text())
   .then(html => {
@@ -7,5 +8,5 @@ fetch('nav-bar.html')
     document.body.prepend(navBar); // Adds it to the top of the body
   })
   .catch(error => console.error('Error loading nav-bar:', error));
-
+});
 
