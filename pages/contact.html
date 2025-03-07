@@ -36,7 +36,25 @@
       <p><button>Contact Me</button><br><br></p>
       </div>
     </div>
+    <div class="Email-Me">
+         <h2>Drop Me A Line</h2>
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" required><br><br>
+    
+    <label for="message">Message:</label><br>
+    <textarea id="message" rows="5" cols="30" required></textarea><br><br>
+    
+    <button onclick="sendEmail()">Send</button>
+    </div>
     </div>
    <script src="./custom-nav.js"></script>
+       <script>
+        function sendEmail() {
+            let email = "your@email.com"; // Replace with your email
+            let subject = encodeURIComponent(document.getElementById("subject").value);
+            let body = encodeURIComponent(document.getElementById("message").value);
+            window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+        }
+    </script>
      </body>
    </html>
