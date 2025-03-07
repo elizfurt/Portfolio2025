@@ -117,11 +117,12 @@ button {
 }
 .contact {
   width: 100vw;
-  height: 125%;
+  height: 100vh;
   background-color:var(--brownlite2);
+  padding-top: 25px;
 }
 
-.poppins-regular, .Email-Me > label {
+.poppins-regular, label {
   font-family: "Poppins", serif;
   font-weight: 400;
   font-style: normal;
@@ -214,10 +215,6 @@ button {
   transform: rotateY(180deg);
 }
 
-.contact {
-    padding: 25px;
-}
-
 .card {
   border-radius: 12px;
   display: flex;
@@ -226,6 +223,15 @@ button {
   margin: auto;
   text-align: center;
   height: 200px;
+}
+.card2 {
+  border-radius: 12px;
+  display: flex;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  height: 550px;
 }
 .card-left {
     border-radius: 12px 0 0 12px;
@@ -261,15 +267,46 @@ button:hover, a:hover {
   opacity: 0.7;
 }
 
-.Email-Me {
+
+.email-me {
   border-radius: 12px;
   background-color: var(--brownlite1);
   width: 100%;
-  height: 50vh;
+  height: 100%;
   padding-top: 50px;
 }
 
-.Email-Me > textarea {
+.message > textarea {
   width: 80%;
   height: 50%;
+  border-radius: 12px;
+  background-color: offwhite;
+  margin-left: 15px;
+}
+
+.subject > input {
+  border-radius: 6px;
+  border: 1px solid;
+  background-color: offwhite;
+  height: 24px;
+  font-size: 16px;
+  margin-left: 15px;
+  width: 80%;
+}
+
+.subject, .message {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
+
+.big-btn {
+border-radius: 12px;
+background-color: var(--blue2);
+height: 50px;
+width: 50%;
+font-size: 16px;
+text-align: center;
 }
