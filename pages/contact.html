@@ -64,7 +64,11 @@
             let company = encodeURIComponent(document.getElementById("company").value);
             let subject = encodeURIComponent(document.getElementById("subject").value);
             let body = encodeURIComponent(document.getElementById("message").value);
-            window.location.href = `mailto:${email}?subject=${subject} - ${company}&body=${body}`;
+            let formattedSubject = subject + (company ? ` - ${company}` : "");
+
+            let encodedSubject = encodeURIComponent(formattedSubject);
+            let encodedBody = encodeURIComponent(body.replace(/\n/g, "%0A"));
+            window.location.href = `mailto:${email}?subject=${encodedSubject}&body=${body}`;
         }
     </script>
      </body>
