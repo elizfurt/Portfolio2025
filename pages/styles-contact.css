@@ -261,7 +261,8 @@ button:hover, a:hover {
   opacity: 0.7;
 }
 
-.email-me {
+.Email-Me {
   border-radius: 12px;
   background-color: var(--brownlite1);
+  width: 100%;
 }
