@@ -37,20 +37,22 @@
       </div>
     </div>
     <br><br><br>
-    <div class="card">
-    <div class="Email-Me">
-     <h2 class="poppins-medium">Drop Me A Line</h2>
+    <div class="card2">
+    <div class="email-me">
+     <h2 class="poppins-medium">Drop Me A Line</h2><br><br>
+     <div class="subject">
     <label for="subject">Subject:</label>
-    <input type="text" id="subject" required><br><br>
-    
-    <label for="message">Message:</label><br>
-    <textarea id="message" rows="5" cols="30" required></textarea><br><br>
-    
-    <button onclick="sendEmail()">Send</button>
+    <input type="text" id="subject" required>
+    </div>
+    <div class="message">
+    <label for="message">Message:</label>
+    <textarea id="message" rows="20" cols="30" required></textarea>
+    </div>
+    <input type= "button" class="big-btn" onclick="sendEmail()" value="Send">
     </div>
     </div>
     </div>
-   </div>
+
    <script src="./custom-nav.js"></script>
        <script>
         function sendEmail() {
