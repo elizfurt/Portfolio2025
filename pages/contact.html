@@ -37,6 +37,7 @@
       </div>
     </div>
     <div class="card">
+    <div class="card-right">
     <div class="Email-Me">
          <h2>Drop Me A Line</h2>
     <label for="subject">Subject:</label>
@@ -48,6 +49,7 @@
     <button onclick="sendEmail()">Send</button>
     </div>
     </div>
+    </div>
    </div>
    </div>
    <script src="./custom-nav.js"></script>
@@ -56,7 +58,7 @@
             let email = "liz@lizfurtado.com"; // Replace with your email
             let subject = encodeURIComponent(document.getElementById("subject").value);
             let body = encodeURIComponent(document.getElementById("message").value);
-            window.location.href = `mailto:${email}?subject=${subject}?&body=${body}`;
+            window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
         }
     </script>
      </body>
