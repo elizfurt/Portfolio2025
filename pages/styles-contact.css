@@ -42,7 +42,7 @@ button {
   align-items: center;
   width: 100vw;
   height: 7vh;
-  background-color: var(--blue2);  
+  background-color: var(--brownlite1);  
 }
 
 .nav-bar > ul > li, .nav-bar > ul > li > a {
