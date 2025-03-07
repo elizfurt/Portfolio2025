@@ -45,10 +45,11 @@ button {
   background-color: var(--green2);  
 }
 
-.nav-bar > ul > li, .nav-bar > ul > li > a{
+.nav-bar > ul > li, .nav-bar > ul > li > a {
   display: inline;
   padding-right: 3vw;
   color: var(--white);
+  text-decoration: none;
 }
 
 .hero {
