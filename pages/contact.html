@@ -41,6 +41,10 @@
     <div class="email-me">
      <h2 class="poppins-medium">Drop Me A Line</h2><br><br>
      <div class="subject">
+    <label for="company">Your Company:</label>
+    <input type="text" id="subject" required>
+    </div>
+     <div class="subject">
     <label for="subject">Subject:</label>
     <input type="text" id="subject" required>
     </div>
@@ -57,9 +61,10 @@
        <script>
         function sendEmail() {
             let email = "liz@lizfurtado.com"; // Replace with your email
+            let company = encodeURIComponent(document.getElementById("company").value);
             let subject = encodeURIComponent(document.getElementById("subject").value);
             let body = encodeURIComponent(document.getElementById("message").value);
-            window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+            window.location.href = `mailto:${email}?subject=${subject} - ${company}&body=${body}`;
         }
     </script>
      </body>
