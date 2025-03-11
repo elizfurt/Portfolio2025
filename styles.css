@@ -195,7 +195,7 @@ button {
 }
 
 .flip-card-back {
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 
