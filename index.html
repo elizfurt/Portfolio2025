@@ -1,0 +1,53 @@
+// This file is written for a React/TypeScript environment to avoid syntax errors.
+import { useState } from 'react';
+
+export default function HomePage() {
+  const [showContact, setShowContact] = useState(false);
+
+  return (
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      minHeight: '100vh',
+      backgroundColor: '#fff',
+      color: '#333',
+      textAlign: 'center',
+      padding: '1rem'
+    }}>
+      <h1 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>Welcome</h1>
+      <p style={{ fontSize: '1.1rem', maxWidth: '400px', marginBottom: '30px' }}>
+        A simple starting point for your portfolio. More work will appear here soon.
+      </p>
+      <button
+        onClick={() => setShowContact(!showContact)}
+        style={{
+          padding: '12px 24px',
+          border: 'none',
+          borderRadius: '20px',
+          backgroundColor: '#007BFF',
+          color: '#fff',
+          cursor: 'pointer',
+          fontSize: '1rem'
+        }}
+      >
+        {showContact ? 'Hide Contact' : 'Show Contact'}
+      </button>
+
+      {showContact && (
+        <div style={{
+          marginTop: '20px',
+          padding: '20px',
+          backgroundColor: '#f1f1f1',
+          borderRadius: '15px',
+          maxWidth: '400px',
+          width: '100%'
+        }}>
+          <p>Email: you@example.com</p>
+          <p>LinkedIn: linkedin.com/in/yourprofile</p>
+        </div>
+      )}
+    </div>
+  );
+}
