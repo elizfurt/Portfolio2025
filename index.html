@@ -1,53 +1,77 @@
-// This file is written for a React/TypeScript environment to avoid syntax errors.
-import { useState } from 'react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 1.1rem;
+    max-width: 400px;
+    margin-bottom: 30px;
+  }
+  button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+  .contact {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    display: none;
+  }
+</style>
+</head>
+<body>
+<h1>Welcome</h1>
+<p>A simple starting point for your portfolio. More work will appear here soon.</p>
+<button id="contactBtn">Show Contact</button>
+<div class="contact" id="contactInfo">
+  <p>Email: you@example.com</p>
+  <p>LinkedIn: linkedin.com/in/yourprofile</p>
+</div>
+<script>
+  // Plain HTML/JS version to avoid TypeScript/JSX parsing errors
+  function toggleContact() {
+    var contact = document.getElementById('contactInfo');
+    var button = document.getElementById('contactBtn');
+    if (contact.style.display === 'none' || contact.style.display === '') {
+      contact.style.display = 'block';
+      button.textContent = 'Hide Contact';
+    } else {
+      contact.style.display = 'none';
+      button.textContent = 'Show Contact';
+    }
+  }
 
-export default function HomePage() {
-  const [showContact, setShowContact] = useState(false);
-
-  return (
-    <div style={{
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      minHeight: '100vh',
-      backgroundColor: '#fff',
-      color: '#333',
-      textAlign: 'center',
-      padding: '1rem'
-    }}>
-      <h1 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>Welcome</h1>
-      <p style={{ fontSize: '1.1rem', maxWidth: '400px', marginBottom: '30px' }}>
-        A simple starting point for your portfolio. More work will appear here soon.
-      </p>
-      <button
-        onClick={() => setShowContact(!showContact)}
-        style={{
-          padding: '12px 24px',
-          border: 'none',
-          borderRadius: '20px',
-          backgroundColor: '#007BFF',
-          color: '#fff',
-          cursor: 'pointer',
-          fontSize: '1rem'
-        }}
-      >
-        {showContact ? 'Hide Contact' : 'Show Contact'}
-      </button>
-
-      {showContact && (
-        <div style={{
-          marginTop: '20px',
-          padding: '20px',
-          backgroundColor: '#f1f1f1',
-          borderRadius: '15px',
-          maxWidth: '400px',
-          width: '100%'
-        }}>
-          <p>Email: you@example.com</p>
-          <p>LinkedIn: linkedin.com/in/yourprofile</p>
-        </div>
-      )}
-    </div>
-  );
-}
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('contactBtn').addEventListener('click', toggleContact);
+  });
+</script>
+</body>
+</html>
